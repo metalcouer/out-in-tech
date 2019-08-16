@@ -9,41 +9,45 @@ function Team() {
         [
           {
             name: 'Joey Marrone',
-            photo: '',
+            photo: './placeholder.png',
             bio: ''
           },
           {
             name: 'Breana Knight',
-            photo: '',
+            photo: './placeholder.png',
             bio: ''
           },
           {
             name: 'Diane Sanchez',
-            photo: '',
+            photo: './placeholder.png',
             bio: ''
           },
           {
             name: 'Michael Stapleton',
-            photo: '',
+            photo: './placeholder.png',
             bio: ''
           },
           {
             name: 'Julie West',
-            photo: '',
+            photo: './placeholder.png',
             bio: ''
           }
         ]
     });
 
   return (
-    <div className="Team">
-      {
-        state.board.map(item =>
-          <div key={item.id}>
-            <h4>{item.name}</h4>
-          </div>
-        )
-      }
+    <div className="TeamWrapper">
+      <div>Denver Chapter Board</div>
+      <div className="teamCard">
+        {
+          state.board.map(item =>
+            <div key={item.id}>
+              <h4>{item.name}</h4>
+              <img className="boardImage" src={`${item.photo}`}></img>
+            </div>
+          )
+        }
+      </div>
     </div>
   );
 
