@@ -3,7 +3,12 @@ import Events from './Events'
 
 
 function Team() {
-  const [state, setState] = useState(
+  const [toggle, setToggle] = useState(false)
+  function toggleMe() { 
+    setToggle(!toggle)
+    console.log(setToggle)
+    } 
+  const [team, setTeam] = useState(
     {
       board:
         [
@@ -33,15 +38,26 @@ function Team() {
   return (
     <div className="TeamWrapper">
       <div>Denver Chapter Board</div>
-      <div className="teamCard">
+      <div className="teamCard" onClick={() => toggleMe()}>
         {
-          state.board.map(item =>
+          team.board.map(item => 
+            { if (toggle === false) {
+            <div>
             <div key={item.id}>
               <h4>{item.name}</h4>
-              <img className="boardImage" src={`${item.photo}`}></img>
+              <img className="boardImage" alt="team pic" src={`${item.photo}`}>
+              </img>
             </div>
+          } else {
+            <div>
+              {item.bio}
+            </div>
+          }
+          }
+            </div>
+            }
           )
-        }
+            }
       </div>
     </div>
   );
