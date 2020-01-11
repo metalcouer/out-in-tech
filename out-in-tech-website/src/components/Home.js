@@ -19,15 +19,17 @@ function Home() {
           <div className="violetLine"></div>
         </div>
       </div> */}
-      <div className="home">
-        <div className="homeHeader">Out in Tech: Mile High Denver</div>
-        <img className="computerGif" src={process.env.PUBLIC_URL + '/Computer-gif-01.gif'} alt="loading..."></img>
-        <div className="homeInfo">Our Misison:
-      <p>To bring queers into the know of who's who and what's what when it comes to the tech environment around Denver Proper.</p>
+      <div className="homeHeader">Out in Tech</div>
+      <div className="home row">
+        <div className="homeInfo col-lg-5">
+          Hey Denver!
+          {/* To bring queers into the know of who's who and what's what when it comes to the tech environment around Denver Proper. */}
         </div>
-        <Events />
-        <Team />
+        <img className="computerGif col-lg-7" src={process.env.PUBLIC_URL + '/Computer-gif-01.gif'} alt="loading..."></img>
       </div>
+
+      <Events />
+      <Team />
     </div >
   );
 }

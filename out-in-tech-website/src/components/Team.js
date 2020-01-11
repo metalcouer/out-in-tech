@@ -8,28 +8,23 @@ function Team() {
       board:
         [
           {
-            name: 'Joey Marrone',
-            photo: './placeholder.png',
-            bio: ''
-          },
-          {
-            name: 'Breana Knight',
-            photo: './placeholder.png',
+            name: 'Lee Knight',
+            photo: './lee.png',
             bio: ''
           },
           {
             name: 'Diane Sanchez',
-            photo: './placeholder.png',
+            photo: './diane.png',
             bio: ''
           },
           {
             name: 'Michael Stapleton',
-            photo: './placeholder.png',
+            photo: './michael.png',
             bio: ''
           },
           {
             name: 'Julie West',
-            photo: './placeholder.png',
+            photo: './julie.png',
             bio: ''
           }
         ]
